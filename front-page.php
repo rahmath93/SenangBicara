@@ -5,11 +5,31 @@ $hero_img = 'https://beta.senangbicara.com/wp-content/uploads/2026/11/Kelas-Publ
 
 <main id="content">
 
-	<!-- 1. HERO SECTION (Persis Referensi Screenshot & Responsif Mobile) -->
-	<section class="relative overflow-hidden bg-[#F4EBFB]">
-		<!-- Background Desktop Full-Width (Subjek Kiri, Ruang Kosong Kanan) -->
-		<div class="hidden md:block absolute inset-0 bg-cover bg-left bg-no-repeat" style="background-image: url('<?php echo esc_url( $hero_img ); ?>');"></div>
+	<!-- 1. HERO SECTION (Fit Full Screen, Gradasi Ungu, & Judul Lurus 1 Baris) -->
+	<section class="relative w-full overflow-hidden bg-[#F5EEFC]">
+		<!-- Background Desktop Full-Width Fit to Screen -->
+		<div class="hidden md:block absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat" style="background-image: url('<?php echo esc_url( $hero_img ); ?>');"></div>
+		<!-- Gradasi Ungu Lembut Persis Referensi (Kiri Jernih, Kanan Ungu Muda) -->
+		<div class="hidden md:block absolute inset-0 bg-gradient-to-r from-transparent via-[#F3E7FD]/35 to-[#EDD8FC]/85"></div>
 
+		<!-- Gambar Mobile (Proporsional & Rapi di Layar HP) -->
+		<div class="md:hidden relative w-full h-[300px] sm:h-[380px] overflow-hidden">
+			<img src="<?php echo esc_url( $hero_img ); ?>" alt="Kelas Public Speaking Senang Bicara" class="w-full h-full object-cover object-[20%_top]">
+			<div class="absolute inset-0 bg-gradient-to-t from-[#F5EEFC] via-[#F5EEFC]/20 to-transparent"></div>
+		</div>
+
+		<!-- Konten Teks Hero (Lurus 1 Baris di Desktop) -->
+		<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 pb-14 pt-2 md:py-0 md:min-h-[560px] lg:min-h-[640px] flex items-center">
+			<div class="w-full md:w-[60%] md:ml-auto text-center md:text-left md:pl-8 lg:pl-14">
+				<h1 class="text-2xl sm:text-3xl md:text-[30px] lg:text-[38px] xl:text-[42px] md:whitespace-nowrap font-bold tracking-tight text-[#111111] leading-tight mb-2">
+					Your <span class="text-[#D9320B]">Partner</span> in Public Speaking
+				</h1>
+				<p class="text-base sm:text-lg lg:text-[20px] font-bold text-[#111111] tracking-normal">
+					Belajar . Berlatih . Bertumbuh
+				</p>
+			</div>
+		</div>
+	</section>
 		<!-- Gambar Mobile (Tampil utuh tanpa memotong wajah pembicara di HP) -->
 		<div class="md:hidden relative w-full h-[320px] sm:h-[400px] overflow-hidden">
 			<img src="<?php echo esc_url( $hero_img ); ?>" alt="Kelas Public Speaking Senang Bicara" class="w-full h-full object-cover object-[22%_top]">
