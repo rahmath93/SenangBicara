@@ -1,7 +1,6 @@
 <?php
-// Deteksi otomatis URL gambar agar tidak pernah broken
-\$local_logo_path = get_template_directory() . '/assets/images/1sb.png';
-$logo_header_url = file_exists($local_logo_path )
+$local_logo_path = get_template_directory() . '/assets/images/1sb.png';
+$logo_header_url = file_exists( $local_logo_path )
 	? get_template_directory_uri() . '/assets/images/1sb.png'
 	: 'https://beta.senangbicara.com/wp-content/uploads/2026/11/1sb.png';
 ?>
@@ -12,12 +11,10 @@ $logo_header_url = file_exists($local_logo_path )
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Senang Bicara – Your Partner in Public Speaking. Belajar . Berlatih . Bertumbuh bersama komunitas dan pelatihan public speaking di Jakarta Selatan.">
 
-	<!-- Google Fonts: Raleway -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-	<!-- Tailwind CSS & Konfigurasi Warna Brand Terpusat -->
 	<script src="https://cdn.tailwindcss.com"></script>
 	<script>
 		tailwind.config = {
@@ -44,7 +41,6 @@ $logo_header_url = file_exists($local_logo_path )
 		}
 	</script>
 
-	<!-- GEO AI & SEO Structured Data (JSON-LD) -->
 	<script type="application/ld+json">
 	{
 		"@context": "https://schema.org",
@@ -52,7 +48,7 @@ $logo_header_url = file_exists($local_logo_path )
 		"name": "Senang Bicara",
 		"alternateName": "SenangBicara",
 		"url": "https://senangbicara.com",
-		"logo": "<?php echo esc_url( \$logo_header_url ); ?>",
+		"logo": "<?php echo esc_url( $logo_header_url ); ?>",
 		"foundingDate": "2011-11-11",
 		"description": "Your Partner in Public Speaking. Belajar . Berlatih . Bertumbuh bersama komunitas dan pelatihan public speaking di Jakarta Selatan.",
 		"email": "senangbicara@gmail.com",
@@ -77,10 +73,8 @@ $logo_header_url = file_exists($local_logo_path )
 <body <?php body_class( 'bg-white text-brand-ink font-sans antialiased selection:bg-brand-purple selection:text-white' ); ?>>
 <?php wp_body_open(); ?>
 
-<!-- TOP BAR (Ungu Gelap #190430 - Persis Referensi) -->
 <div class="hidden md:block bg-brand-topbar text-white text-[13px] py-2.5">
 	<div class="max-w-7xl mx-auto px-6 lg:px-10 flex justify-between items-center">
-		<!-- Kiri: Lokasi & Email -->
 		<div class="flex items-center gap-6">
 			<span class="flex items-center gap-2 font-medium">
 				<svg class="w-3.5 h-3.5 text-white shrink-0" fill="currentColor" viewBox="0 0 384 512"><path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"/></svg>
@@ -92,7 +86,6 @@ $logo_header_url = file_exists($local_logo_path )
 			</a>
 		</div>
 
-		<!-- Kanan: Social Media Icons -->
 		<div class="flex items-center gap-3.5">
 			<span class="font-medium text-white/95">Social Media :</span>
 			<a href="https://www.facebook.com/SenangBicaraCommunity/" target="_blank" rel="noopener" aria-label="Facebook Senang Bicara" class="text-white hover:text-white/75 transition">
@@ -111,15 +104,12 @@ $logo_header_url = file_exists($local_logo_path )
 	</div>
 </div>
 
-<!-- MAIN HEADER / NAVBAR -->
 <header class="sticky top-0 z-50 bg-white border-b border-zinc-100/80 shadow-[0_2px_15px_rgba(0,0,0,0.03)]">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 h-16 sm:h-[88px] flex items-center justify-between">
-		<!-- Logo -->
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="flex items-center shrink-0" aria-label="Senang Bicara Beranda">
-			<img src="<?php echo esc_url( \$logo_header_url ); ?>" alt="Senang Bicara" class="h-7 sm:h-9 w-auto object-contain">
+			<img src="<?php echo esc_url( $logo_header_url ); ?>" alt="Senang Bicara" class="h-7 sm:h-9 w-auto object-contain">
 		</a>
 
-		<!-- Desktop Navigation -->
 		<nav class="hidden md:flex items-center gap-8 text-[15px] font-semibold text-zinc-900" aria-label="Main Navigation">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="text-brand-purple hover:text-brand-red transition">Beranda</a>
 			<div class="relative group">
@@ -139,7 +129,6 @@ $logo_header_url = file_exists($local_logo_path )
 			<a href="#kontak" class="text-zinc-900 hover:text-brand-purple transition">Hubungi Kami</a>
 		</nav>
 
-		<!-- Desktop Button & Mobile Hamburger -->
 		<div class="flex items-center gap-3">
 			<a href="https://docs.google.com/forms/d/1AMBrvGWPJHhi6WMo8HdtUaAK9OEEAEfX9tpnVHHnW_8/viewform?pli=1&pli=1&edit_requested=true" target="_blank" rel="noopener" class="hidden md:inline-flex items-center justify-center px-7 py-3 rounded-[4px] bg-brand-purple hover:bg-brand-purpleDark text-white text-sm font-semibold transition">
 				Daftar Anggota
@@ -150,7 +139,6 @@ $logo_header_url = file_exists($local_logo_path )
 		</div>
 	</div>
 
-	<!-- Mobile Menu Drawer -->
 	<div id="mobile-menu" class="hidden md:hidden bg-white border-t border-zinc-100 px-4 pt-3 pb-6 space-y-3 shadow-lg">
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="block py-2 px-3 rounded-lg font-bold text-brand-purple bg-brand-purpleLight/70">Beranda</a>
 		<div class="px-3 py-1">
