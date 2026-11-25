@@ -1,11 +1,6 @@
 <?php
 get_header();
-
-// Deteksi otomatis URL gambar hero agar 100% tampil dan anti-broken
-$local_hero_path = get_template_directory() . '/assets/images/Kelas Public Speaking Senang Bicara.jpeg';
-$hero_img = file_exists( $local_hero_path )
-	? get_template_directory_uri() . '/assets/images/' . rawurlencode( 'Kelas Public Speaking Senang Bicara.jpeg' )
-	: 'https://beta.senangbicara.com/wp-content/uploads/2026/11/Gemini_Generated_Image_43vqo843vqo843vq.jpeg';
+$hero_img = 'https://beta.senangbicara.com/wp-content/uploads/2026/11/Kelas-Public-Speaking-Senang-Bicara.jpeg';
 ?>
 
 <main id="content">
