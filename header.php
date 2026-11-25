@@ -1,8 +1,6 @@
 <?php
-$local_logo_path = get_template_directory() . '/assets/images/1sb.png';
-$logo_header_url = file_exists( $local_logo_path )
-	? get_template_directory_uri() . '/assets/images/1sb.png'
-	: 'https://beta.senangbicara.com/wp-content/uploads/2026/11/1sb.png';
+$logo_header_url = 'https://beta.senangbicara.com/wp-content/uploads/2026/11/1sb.png';
+?>
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="scroll-smooth">
